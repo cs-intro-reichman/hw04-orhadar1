@@ -50,7 +50,7 @@ public class ArrCharOps {
             return false;
         }
     }
-        return false;
+        return true;
     }
 
     /** Returns the index within the given array of the first occurrence of the given character.
