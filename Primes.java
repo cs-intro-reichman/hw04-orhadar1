@@ -2,6 +2,7 @@ public class Primes {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
         boolean isPrime[] = new boolean[n + 1];
+        int count = 0;
         if (n < 2) {
          return;
         }
@@ -19,11 +20,19 @@ public class Primes {
             }
             p++;
         }
-         for(int i = 2; i <= n; i ++){
-            if(isPrime[i]){
+           for (int i = 2; i <= n; i++) {
+            if (isPrime[i]) {
                 System.out.println(i);
+                count++;
             }
-         }   
+        }
+
+        
+        int percent = (int) Math.round(100.0 * count / n);
+
+       
+        System.out.println("There are " + count + " primes between 2 and " + n +
+                           " (" + percent + "% are primes)");
         }
             
         
